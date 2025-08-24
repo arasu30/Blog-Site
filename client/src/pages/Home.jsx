@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Newsletter from '../components/Newsletter'
+import BlogList from '../components/BlogList'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
      <>
       <Navbar/>
       <Header/>
+      <BlogList />
       <Newsletter />
       <Footer />
     </>
