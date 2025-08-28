@@ -43,7 +43,12 @@ const Comments = () => {
                     <th scope="col" className="px-6 py-3"> Action </th>
                 </tr>
             </thead>
-            
+            <tbody>
+                {comments.filter((comment)=>{
+                    if(filter === "Approved") return comment.isApproved === true;
+                    return comment.isApproved === false;
+                }).map((comment, index)=> <CommentTableItem key={comment._id} comment={comment} index={index + 1} fetchComments={fetchComments} />)}
+            </tbody>
         </table>
       </div>
     </div>
